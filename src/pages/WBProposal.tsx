@@ -12,11 +12,15 @@ import facadeImage from '../assets/ideias/ideia2/image.png'
 const instagram = contact.instagram
 const whatsapp = `${contact.whatsapp}?text=${encodeURIComponent('Olá! Gostaria de conversar sobre um projeto.')}`
 
-const services: { number: string; icon: IconName; title: string; description: string }[] = [
-  { number: '01', icon: 'house', title: 'Projeto arquitetônico', description: 'Soluções personalizadas e funcionais para transformar ideias em espaços.' },
-  { number: '02', icon: 'shield', title: 'Projeto estrutural', description: 'Segurança e eficiência pensadas em cada detalhe da estrutura.' },
-  { number: '03', icon: 'compass', title: 'Projeto elétrico', description: 'Planejamento das instalações para mais desempenho e segurança.' },
-  { number: '04', icon: 'bath', title: 'Projeto hidrossanitário', description: 'Soluções para as instalações de abastecimento de água e escoamento.' },
+const worksWithPhotos = works.filter((work) => work.images.length > 0)
+const fixedServices: { id: string; title: string; icon: IconName; summary: string }[] = [
+  {
+    id: 'projeto-arquitetonico',
+    title: 'Projeto arquitetônico',
+    icon: 'house',
+    summary: 'Soluções personalizadas e funcionais para transformar ideias em espaços.',
+  },
+  ...works.filter((work) => work.images.length === 0),
 ]
 
 export function WBProposal() {
@@ -41,7 +45,7 @@ export function WBProposal() {
               </div>
             </div>
             <div className="wb-hero-bottom">
-              <a href="#/wb/servicos"><span className="wb-scroll-mark" />Explore as possibilidades</a>
+              <a href="#/wb/atuacao"><span className="wb-scroll-mark" />Explore as possibilidades</a>
               <span>PROJETOS · OBRAS · IMÓVEIS</span>
             </div>
           </div>
@@ -55,40 +59,6 @@ export function WBProposal() {
           </div>
         </div>
 
-        <section id="wb-servicos" className="wb-section wb-services" aria-labelledby="wb-services-title">
-          <div className="wb-container">
-            <div className="wb-section-heading">
-              <div>
-                <span className="wb-kicker">01 / NOSSOS SERVIÇOS</span>
-                <h2 id="wb-services-title">Cada detalhe importa.<br /><span>Desde a planta.</span></h2>
-              </div>
-              <p>Projetos que conectam funcionalidade, segurança e as necessidades de cada construção.</p>
-            </div>
-            <div className="wb-service-grid">
-              {services.map((service) => (
-                <article className="wb-service" key={service.number}>
-                  <div className="wb-service-top">
-                    <Icon name={service.icon} />
-                    <span>{service.number}</span>
-                  </div>
-                  <h3>{service.title}</h3>
-                  <p>{service.description}</p>
-                </article>
-              ))}
-            </div>
-            <div className="wb-documentation">
-              <div className="wb-documentation-icon"><Icon name="check" /></div>
-              <div>
-                <h3>Seu imóvel também precisa estar em ordem.</h3>
-                <p>Desmembramento, remembramento e averbação. Regularização documental com agilidade e segurança.</p>
-              </div>
-              <a href={whatsapp} target="_blank" rel="noreferrer">
-                Fale sobre regularização <Icon name="arrow" />
-              </a>
-            </div>
-          </div>
-        </section>
-
         <section id="wb-atuacao" className="wb-section wb-work" aria-labelledby="wb-work-title">
           <div className="wb-container wb-work-grid">
             <div className="wb-work-visual">
@@ -96,7 +66,7 @@ export function WBProposal() {
               <span>PROJETO AUTORAL WB · VISUALIZAÇÃO 3D</span>
             </div>
             <div className="wb-work-copy">
-              <span className="wb-kicker">02 / PROJETOS E EXECUÇÃO</span>
+              <span className="wb-kicker">01 / PROJETOS E EXECUÇÃO</span>
               <h2 id="wb-work-title">O próximo espaço<br />pode começar<br /><span>com a sua ideia.</span></h2>
               <p>A WB Construtora atua com projetos e execução de obras residenciais e comerciais, públicas e privadas.</p>
               <div className="wb-work-types">
@@ -127,7 +97,7 @@ export function WBProposal() {
           <div className="wb-container">
             <div className="wb-section-heading">
               <div>
-                <span className="wb-kicker">03 / IMÓVEIS</span>
+                <span className="wb-kicker">02 / IMÓVEIS</span>
                 <h2 id="wb-properties-title">Um novo lugar.<br /><span>Novas possibilidades.</span></h2>
               </div>
               <p>Explore os imóveis do catálogo e veja fotos, características e detalhes de cada espaço.</p>
@@ -165,22 +135,44 @@ export function WBProposal() {
           <div className="wb-container">
             <div className="wb-section-heading">
               <div>
-                <span className="wb-kicker">04 / SOLUÇÕES PARA SUA OBRA</span>
+                <span className="wb-kicker">03 / SOLUÇÕES PARA SUA OBRA</span>
                 <h2 id="wb-portfolio-title">Serviços da WB Construtora.<br /><span>Do projeto ao acompanhamento.</span></h2>
               </div>
               <a className="wb-inline-link" href={instagram} target="_blank" rel="noreferrer">Acompanhe a WB no Instagram <Icon name="arrow" /></a>
             </div>
             <p className="wb-catalog-note">Conheça cada serviço, explore o projeto autoral e veja os registros de fiscalização de obras.</p>
             <div className="wb-portfolio-grid">
-              {works.map((work) => <WorkCard key={work.id} work={work} />)}
+              {worksWithPhotos.map((work) => <WorkCard key={work.id} work={work} />)}
             </div>
+            <section id="wb-servicos" className="wb-fixed-services" aria-labelledby="wb-fixed-services-title">
+              <div className="wb-fixed-services-heading">
+                <span className="wb-kicker">NOSSOS SERVIÇOS</span>
+                <h3 id="wb-fixed-services-title">Soluções para cada etapa da sua obra.</h3>
+              </div>
+              <ul className="wb-fixed-services-list">
+                {fixedServices.map((service) => (
+                  <li key={service.id}>
+                    <Icon name={service.icon} />
+                    <div>
+                      <h4>{service.title}</h4>
+                      <p>{service.summary}</p>
+                      {service.id === 'regularizacao-de-imoveis' && (
+                        <a className="wb-inline-link" href={whatsapp} target="_blank" rel="noreferrer">
+                          Fale sobre regularização <Icon name="arrow" />
+                        </a>
+                      )}
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </section>
           </div>
         </section>
 
         <section id="wb-empresa" className="wb-section wb-company" aria-labelledby="wb-company-title">
           <div className="wb-container wb-company-grid">
             <div>
-              <span className="wb-kicker">05 / A CONSTRUTORA</span>
+              <span className="wb-kicker">04 / A CONSTRUTORA</span>
               <h2 id="wb-company-title">Engenharia presente.<br /><span>Do projeto à obra.</span></h2>
               <p>Projetar e construir exige olhar para o todo, sem perder de vista os detalhes. É com essa atenção que apresentamos as soluções da WB Construtora.</p>
               <div className="wb-engineer">

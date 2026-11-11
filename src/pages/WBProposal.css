@@ -75,25 +75,28 @@
 .wb-principles .icon { grid-row: span 2; color: var(--wb-blue); width: 26px; height: 26px; }
 .wb-principles h3 { font-size: 17px; }
 .wb-principles p { font-size: 12px; line-height: 1.8; color: var(--wb-muted); }
-.wb-contact { background: var(--wb-blue); color: #fff; padding-block: 77px; }
-.wb-contact-grid { display: flex; justify-content: space-between; align-items: center; gap: 50px; }
-.wb-contact .wb-kicker { color: #d5dbe1; font-size: 8px; }
-.wb-contact h2 { font-size: clamp(36px, 4.2vw, 58px); }
-.wb-contact h2 span { color: #cbd2d9; }
-.wb-contact p { font-size: 12px; line-height: 1.9; color: #d5dbe1; max-width: 380px; margin-top: 21px; }
+.wb-contact { background: rgba(52, 72, 94, .06); color: var(--wb-ink); padding-block: 75px; border-top: 1px solid rgba(52, 72, 94, .08); }
+.wb-contact-grid { display: flex; flex-direction: column; align-items: center; gap: 30px; text-align: center; }
+.wb-contact .wb-kicker { justify-content: center; color: #5c6e83; font-size: 8px; }
+.wb-contact h2 { font-size: clamp(36px, 3.8vw, 54px); line-height: 1.2; margin-top: 20px; }
+.wb-contact h2 span { color: #718197; }
+.wb-contact p { font-size: 13px; line-height: 1.9; color: #6a7686; max-width: 440px; margin: 22px auto 0; }
 .wb-contact-actions { display: flex; flex-direction: column; align-items: center; }
+.wb-contact .wb-button-light { background: var(--wb-ink); color: #fff; border-radius: 4px; padding-inline: 27px; min-height: 55px; }
+.wb-contact .wb-button-light:hover { background: #34485e; }
 .wb-button-light { background: #fff; color: var(--wb-ink); }
 .wb-button-light:hover { background: #e8ecf0; }
-.wb-phone { font-size: 17px; letter-spacing: .5px; margin-top: 25px; }
-.wb-contact-actions > span { margin-top: 8px; font-size: 10px; color: #d5dbe1; }
-.wb-footer { background: var(--wb-ink); color: #fff; }
-.wb-footer-top { display: flex; justify-content: space-between; align-items: center; gap: 35px; padding-block: 49px; }
-.wb-footer .wb-monogram { color: var(--wb-ink); background: #fff; }
-.wb-footer .wb-brand small { color: #a8afbc; }
-.wb-footer-top p { color: #a8afbc; font-size: 11px; line-height: 1.9; }
-.wb-footer-top > a { display: flex; align-items: center; gap: 12px; font-size: 12px; }
+.wb-phone { font-size: 15px; letter-spacing: .3px; margin-top: 23px; color: #455971; }
+.wb-contact-actions > span { margin-top: 7px; font-size: 10px; color: #728094; }
+.wb-footer { background: rgba(52, 72, 94, .035); color: var(--wb-ink); border-top: 1px solid rgba(52, 72, 94, .09); }
+.wb-footer-top { display: flex; flex-direction: column; align-items: center; gap: 19px; padding-block: 42px 34px; text-align: center; }
+.wb-footer .wb-monogram { color: #fff; background: var(--wb-ink); }
+.wb-footer .wb-brand small { color: #6d7b8c; }
+.wb-footer-top p { color: #728094; font-size: 11px; line-height: 1.9; }
+.wb-footer-top > a { display: flex; align-items: center; gap: 12px; font-size: 12px; color: #40566d; padding: 11px 16px; border: 1px solid #d6dee6; border-radius: 4px; }
+.wb-footer-top > a:hover { background: rgba(52, 72, 94, .05); }
 .wb-footer-top > a .icon { width: 18px; height: 18px; }
-.wb-footer-bottom { border-top: 1px solid #42454f; padding-block: 22px; display: flex; justify-content: space-between; gap: 20px; font-size: 9px; color: #a8afbc; line-height: 1.7; }
+.wb-footer-bottom { border-top: 1px solid rgba(52, 72, 94, .12); padding-block: 22px; display: flex; flex-wrap: wrap; justify-content: center; gap: 12px 26px; font-size: 9px; color: #7b8797; line-height: 1.7; text-align: center; }
 
 /* Full-width architectural banner */
 .wb-hero { position: relative; min-height: clamp(600px, calc(100svh - 94px), 900px); display: flex; color: #fff; background: var(--wb-ink); isolation: isolate; overflow: hidden; }
@@ -194,7 +197,21 @@
   .wb-property-open { width: 41px; height: 41px; }
 }
 .wb-portfolio { background: #eef1f4; }
-.wb-portfolio-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 25px; }
+.wb-portfolio-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 25px; }
+.wb-fixed-services { margin-top: 55px; padding-top: 38px; border-top: 1px solid #d2dae3; }
+.wb-fixed-services-heading h3 { margin-top: 12px; font-size: 26px; line-height: 1.4; letter-spacing: -.7px; }
+.wb-fixed-services-list { list-style: none; margin: 29px 0 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 50px; }
+.wb-fixed-services-list > li { display: grid; grid-template-columns: 30px minmax(0, 1fr); align-items: start; gap: 17px; padding-block: 23px; border-top: 1px solid #d8dfe7; }
+.wb-fixed-services-list > li > .icon { width: 25px; height: 25px; color: #40576e; }
+.wb-fixed-services-list h4 { margin: 0; font-family: 'Manrope', sans-serif; font-size: 15px; font-weight: 650; line-height: 1.5; }
+.wb-fixed-services-list p { margin-top: 8px; font-size: 12px; line-height: 1.85; color: var(--wb-muted); }
+@media (max-width: 600px) {
+  .wb-fixed-services { margin-top: 36px; padding-top: 28px; }
+  .wb-fixed-services-heading h3 { font-size: 23px; }
+  .wb-fixed-services-list { grid-template-columns: 1fr; margin-top: 24px; }
+  .wb-fixed-services-list > li { padding-block: 20px; gap: 13px; }
+  .wb-fixed-services-list h4 { font-size: 14px; }
+}
 .wb-work-card { min-width: 0; background: #fff; border: 1px solid #d6dde4; border-radius: 8px; overflow: hidden; }
 .wb-work-card > a { display: flex; flex-direction: column; height: 100%; }
 .wb-service-cover { aspect-ratio: 1.5; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 22px; background: #e3e9ef; color: #34485e; border-bottom: 1px solid #d6dde4; }
@@ -327,8 +344,7 @@
   .wb-company-grid > div > p { max-width: 510px; }
   .wb-contact-grid { gap: 30px; }
   .wb-contact-actions .wb-button { gap: 12px; padding-inline: 16px; font-size: 11px; }
-  .wb-footer-top { flex-wrap: wrap; gap: 28px; }
-  .wb-footer-top p { display: none; }
+  .wb-footer-top { gap: 19px; }
 }
 @media (max-width: 600px) {
   .wb-container { width: calc(100% - 40px); }
@@ -365,13 +381,13 @@
   .wb-principles > div { padding-block: 21px; }
   .wb-principles p { font-size: 11px; }
   .wb-contact { padding-block: 53px; }
-  .wb-contact-grid { flex-direction: column; align-items: flex-start; gap: 30px; }
+  .wb-contact-grid { gap: 27px; }
   .wb-contact .wb-kicker { font-size: 7px; }
   .wb-contact h2 { font-size: 39px; }
-  .wb-contact-actions { align-items: flex-start; }
+  .wb-contact-actions { align-items: center; }
   .wb-contact-actions .wb-button { font-size: 12px; gap: 23px; padding-inline: 21px; }
   .wb-phone { margin-top: 23px; font-size: 16px; }
-  .wb-footer-top { flex-direction: column; align-items: flex-start; padding-block: 36px; }
+  .wb-footer-top { padding-block: 36px; }
   .wb-footer-top > a { font-size: 11px; }
   .wb-footer-bottom { flex-direction: column; gap: 10px; font-size: 8px; }
 }
