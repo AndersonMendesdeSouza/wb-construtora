@@ -36,9 +36,9 @@ function App() {
       }
 
       if (section) {
-        document.getElementById(section)?.scrollIntoView({ behavior: 'smooth' })
+        document.getElementById(section)?.scrollIntoView({ behavior: 'auto' })
       } else {
-        window.scrollTo({ top: 0, behavior: 'instant' })
+        window.scrollTo({ top: 0, behavior: property || work ? 'instant' : 'auto' })
       }
     })
     return () => window.cancelAnimationFrame(frame)

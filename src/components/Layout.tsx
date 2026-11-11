@@ -11,9 +11,9 @@ export function Header() {
       <div className="wb-container wb-header-inner">
         <Brand />
         <nav id="wb-navigation" className={menuOpen ? 'wb-nav wb-nav-open' : 'wb-nav'} aria-label="Navegação principal">
-          <a href="#/wb/servicos" onClick={() => setMenuOpen(false)}>Serviços</a>
           <a href="#/wb/imoveis" onClick={() => setMenuOpen(false)}>Imóveis</a>
           <a href="#/wb/trabalhos" onClick={() => setMenuOpen(false)}>Trabalhos</a>
+          <a href="#/wb/servicos" onClick={() => setMenuOpen(false)}>Serviços</a>
           <a href="#/wb/empresa" onClick={() => setMenuOpen(false)}>A construtora</a>
           <a className="wb-nav-contact" href="#/wb/contato" onClick={() => setMenuOpen(false)}>
             Solicitar orçamento <Icon name="arrow" />

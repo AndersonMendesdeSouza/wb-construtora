@@ -45,7 +45,7 @@ export function WBProposal() {
               </div>
             </div>
             <div className="wb-hero-bottom">
-              <a href="#/wb/atuacao"><span className="wb-scroll-mark" />Explore as possibilidades</a>
+              <a href="#/wb/imoveis"><span className="wb-scroll-mark" />Explore as possibilidades</a>
               <span>PROJETOS · OBRAS · IMÓVEIS</span>
             </div>
           </div>
@@ -59,45 +59,11 @@ export function WBProposal() {
           </div>
         </div>
 
-        <section id="wb-atuacao" className="wb-section wb-work" aria-labelledby="wb-work-title">
-          <div className="wb-container wb-work-grid">
-            <div className="wb-work-visual">
-              <img src={facadeImage} alt="Projeto autoral da WB: fachada residencial com revestimento texturizado e iluminação noturna" loading="lazy" />
-              <span>PROJETO AUTORAL WB · VISUALIZAÇÃO 3D</span>
-            </div>
-            <div className="wb-work-copy">
-              <span className="wb-kicker">01 / PROJETOS E EXECUÇÃO</span>
-              <h2 id="wb-work-title">O próximo espaço<br />pode começar<br /><span>com a sua ideia.</span></h2>
-              <p>A WB Construtora atua com projetos e execução de obras residenciais e comerciais, públicas e privadas.</p>
-              <div className="wb-work-types">
-                <div>
-                  <span>01</span>
-                  <h3>Residencial</h3>
-                  <p>Espaços pensados para viver.</p>
-                </div>
-                <div>
-                  <span>02</span>
-                  <h3>Comercial</h3>
-                  <p>Ambientes para o seu negócio.</p>
-                </div>
-                <div>
-                  <span>03</span>
-                  <h3>Obras públicas e privadas</h3>
-                  <p>Planejamento e execução de obras.</p>
-                </div>
-              </div>
-              <a className="wb-inline-link" href={instagram} target="_blank" rel="noreferrer">
-                Veja os trabalhos no Instagram <Icon name="arrow" />
-              </a>
-            </div>
-          </div>
-        </section>
-
         <section id="wb-imoveis" className="wb-section wb-properties" aria-labelledby="wb-properties-title">
           <div className="wb-container">
             <div className="wb-section-heading">
               <div>
-                <span className="wb-kicker">02 / IMÓVEIS</span>
+                <span className="wb-kicker">01 / IMÓVEIS</span>
                 <h2 id="wb-properties-title">Um novo lugar.<br /><span>Novas possibilidades.</span></h2>
               </div>
               <p>Explore os imóveis do catálogo e veja fotos, características e detalhes de cada espaço.</p>
@@ -135,7 +101,7 @@ export function WBProposal() {
           <div className="wb-container">
             <div className="wb-section-heading">
               <div>
-                <span className="wb-kicker">03 / SOLUÇÕES PARA SUA OBRA</span>
+                <span className="wb-kicker">02 / SOLUÇÕES PARA SUA OBRA</span>
                 <h2 id="wb-portfolio-title">Serviços da WB Construtora.<br /><span>Do projeto ao acompanhamento.</span></h2>
               </div>
               <a className="wb-inline-link" href={instagram} target="_blank" rel="noreferrer">Acompanhe a WB no Instagram <Icon name="arrow" /></a>
@@ -166,6 +132,40 @@ export function WBProposal() {
                 ))}
               </ul>
             </section>
+          </div>
+        </section>
+
+        <section id="wb-atuacao" className="wb-section wb-work" aria-labelledby="wb-work-title">
+          <div className="wb-container wb-work-grid">
+            <div className="wb-work-visual">
+              <img src={facadeImage} alt="Projeto autoral da WB: fachada residencial com revestimento texturizado e iluminação noturna" loading="lazy" />
+              <span>PROJETO AUTORAL WB · VISUALIZAÇÃO 3D</span>
+            </div>
+            <div className="wb-work-copy">
+              <span className="wb-kicker">03 / PROJETOS E EXECUÇÃO</span>
+              <h2 id="wb-work-title">O próximo espaço<br />pode começar<br /><span>com a sua ideia.</span></h2>
+              <p>A WB Construtora atua com projetos e execução de obras residenciais e comerciais, públicas e privadas.</p>
+              <div className="wb-work-types">
+                <div>
+                  <span>01</span>
+                  <h3>Residencial</h3>
+                  <p>Espaços pensados para viver.</p>
+                </div>
+                <div>
+                  <span>02</span>
+                  <h3>Comercial</h3>
+                  <p>Ambientes para o seu negócio.</p>
+                </div>
+                <div>
+                  <span>03</span>
+                  <h3>Obras públicas e privadas</h3>
+                  <p>Planejamento e execução de obras.</p>
+                </div>
+              </div>
+              <a className="wb-inline-link" href={instagram} target="_blank" rel="noreferrer">
+                Veja os trabalhos no Instagram <Icon name="arrow" />
+              </a>
+            </div>
           </div>
         </section>
 
