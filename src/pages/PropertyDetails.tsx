@@ -12,7 +12,7 @@ export function PropertyDetails({ property }: { property: Property }) {
 
   return (
     <main id="conteudo" tabIndex={-1} className="details-page container">
-      <a className="text-link detail-back" href="#imoveis">
+      <a className="text-link detail-back" href="#/wb/imoveis">
         <Icon name="arrow" className="rotate" />
         Voltar
       </a>
@@ -135,10 +135,10 @@ export function PropertyDetails({ property }: { property: Property }) {
           </p>
           <div className="advisor">
             <Brand />
-            <span>Atendimento em Buriti Alegre e região</span>
+            <span>Fale com a equipe da WB Construtora</span>
           </div>
           <p className="demo-disclaimer">
-            Anúncio demonstrativo. Preço, localização e características são fictícios.
+            Anúncio demonstrativo com imagem gerada por IA. Preço, localização e características são fictícios.
           </p>
         </aside>
       </div>

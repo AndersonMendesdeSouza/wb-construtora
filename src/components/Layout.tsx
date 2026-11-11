@@ -5,18 +5,30 @@ import { contact } from '../data/properties'
 
 export function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
+
   return (
-    <header className="site-header">
-      <div className="container header-inner">
+    <header className="wb-header">
+      <div className="wb-container wb-header-inner">
         <Brand />
-        <nav className={menuOpen ? 'header-nav is-open' : 'header-nav'} id="main-navigation" aria-label="Navegação principal">
-          <a href="#/" onClick={() => setMenuOpen(false)}>Início</a>
-          <a href="#imoveis" onClick={() => setMenuOpen(false)}>Imóveis</a>
-          <a href="#sobre" onClick={() => setMenuOpen(false)}>Sobre nós</a>
-          <a href="#contato" onClick={() => setMenuOpen(false)}>Contato</a>
+        <nav id="wb-navigation" className={menuOpen ? 'wb-nav wb-nav-open' : 'wb-nav'} aria-label="Navegação principal">
+          <a href="#/wb/servicos" onClick={() => setMenuOpen(false)}>Serviços</a>
+          <a href="#/wb/imoveis" onClick={() => setMenuOpen(false)}>Imóveis</a>
+          <a href="#/wb/trabalhos" onClick={() => setMenuOpen(false)}>Trabalhos</a>
+          <a href="#/wb/empresa" onClick={() => setMenuOpen(false)}>A construtora</a>
+          <a className="wb-nav-contact" href="#/wb/contato" onClick={() => setMenuOpen(false)}>
+            Solicitar orçamento <Icon name="arrow" />
+          </a>
         </nav>
-        <a className="button header-contact" href={contact.whatsapp} target="_blank" rel="noreferrer"><Icon name="whatsapp" />Vamos conversar</a>
-        <button className="icon-button menu-toggle" aria-label={menuOpen ? 'Fechar menu' : 'Abrir menu'} aria-expanded={menuOpen} aria-controls="main-navigation" onClick={() => setMenuOpen(!menuOpen)}><Icon name={menuOpen ? 'close' : 'menu'} /></button>
+        <button
+          className="wb-menu"
+          type="button"
+          aria-label={menuOpen ? 'Fechar menu' : 'Abrir menu'}
+          aria-expanded={menuOpen}
+          aria-controls="wb-navigation"
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          <Icon name={menuOpen ? 'close' : 'menu'} />
+        </button>
       </div>
     </header>
   )
@@ -24,13 +36,20 @@ export function Header() {
 
 export function Footer() {
   return (
-    <footer className="site-footer">
-      <div className="container footer-top">
-        <div><Brand /><p>Conectando pessoas, imóveis<br />e novos começos.</p></div>
-        <div className="footer-links"><span>Explore</span><a href="#imoveis">Encontre seu imóvel</a><a href="#sobre">Conheça a Richardson Paula</a></div>
-        <div className="footer-links"><span>Estamos por perto</span><p>Buriti Alegre e Lago das Brisas · GO</p><a href={contact.instagram} target="_blank" rel="noreferrer"><Icon name="instagram" />@rplagodasbrisas</a></div>
+    <footer className="wb-footer">
+      <div className="wb-container">
+        <div className="wb-footer-top">
+          <Brand />
+          <p>Planejamento técnico.<br />Confiança em cada etapa.</p>
+          <a href={contact.instagram} target="_blank" rel="noreferrer">
+            <Icon name="instagram" />@wbconstrutora<Icon name="arrow" />
+          </a>
+        </div>
+        <div className="wb-footer-bottom">
+          <span>© {new Date().getFullYear()} WB Construtora.</span>
+          <span>Proposta demonstrativa · Imagens ilustrativas.</span>
+        </div>
       </div>
-      <div className="container footer-bottom"><span>© {new Date().getFullYear()} Richardson Paula. Todos os direitos reservados.</span><span>Seu novo começo tem endereço.</span></div>
     </footer>
   )
 }

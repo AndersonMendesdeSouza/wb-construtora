@@ -1,0 +1,12 @@
+Original illustrative assets generated with the built-in ImageGen tool.
+These images do not depict real offers or completed WB projects.
+
+house_pool
+Use case: photorealistic-natural. Asset: a landscape property catalogue image, illustrative architectural concept for a Brazilian construction company. A tasteful contemporary two-story house in Goiás, white and light gray walls, charcoal flat roof details, warm wood accents, lush but restrained garden, a modest private swimming pool, covered outdoor veranda and large sliding glass doors. Wide daylight architectural photography, eye-level, realistic proportions, elegant residential construction, quiet blue sky. Show the home and pool as one coherent scene, no people, no signage, no logos, no text, no watermarks, no UI, no collage. This is a new fictional architectural illustration and does not depict an existing advertised property. Landscape 3:2 framing.
+
+house_city
+Use case: photorealistic-natural. Asset: a landscape property catalogue image, illustrative architectural concept for a Brazilian construction company. Front street view of a tasteful single-story contemporary Brazilian city home with white stucco and gray stone facade accents, rectangular flat parapet roof, sheltered two-car garage without cars, modest front garden, a simple paved entrance and a normal residential sidewalk. The house should be practical and approachable, moderately sized rather than a mansion. Daytime professional architectural photography, clear blue sky, realistic light and material textures, straight verticals. No people, no signs, no words, no logos, no watermarks, no UI, no collage. This is an original fictional architectural illustration, not an existing advertised property. Landscape 3:2 framing.
+
+land
+Use case: photorealistic-natural. Asset: a landscape image for a fictional residential lot card in a Brazilian construction company website. Street-level wide view of an empty rectangular residential plot with short green grass, no buildings on the plot, one simple sidewalk at the foreground, modest low boundary walls on the sides, distant trees and a few unobtrusive suburban houses beyond the plot. Central Brazil sunny daylight, realistic landscape photography, natural vegetation, neutral honest presentation. No ocean, no lake, no construction machinery, no people, no sale signs, no labels, no words, no logos, no watermarks, no UI, no collage. Original illustrative concept only; not a photograph of an actual offered property. Landscape 3:2 framing.
+

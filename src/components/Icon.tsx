@@ -19,6 +19,10 @@ const paths = {
   shield: <><path d="m12 2 8 4v6c0 5-8 10-8 10S4 17 4 12V6l8-4Z" /><path d="m8 12 3 3 5-6" /></>,
   key: <><circle cx="8" cy="8" r="5" /><path d="m12 12 9 9m-4-4 3-3m-6 0 3-3" /></>,
   compass: <><circle cx="12" cy="12" r="10" /><path d="m16 8-3 5-5 3 3-5 5-3Z" /></>,
+  structure: <path d="M5 3h14v4H5zM5 17h14v4H5zM8 7v10M16 7v10M5 7l3 2m11-2-3 2M5 17l3-2m11 2-3-2" />,
+  bolt: <path d="m13 2-9 12h7l-1 8 10-13h-7l1-7Z" />,
+  drop: <path d="M12 2S5 10 5 15a7 7 0 0 0 14 0c0-5-7-13-7-13ZM8 15a4 4 0 0 0 4 4" />,
+  document: <><path d="M5 2h10l4 4v16H5V2ZM15 2v5h4M8 11h8M8 15h8M8 19h5" /></>,
   leaf: <path d="M20 3C6 1 1 12 7 17S22 15 20 3ZM4 21 16 9" />,
 } satisfies Record<string, ReactNode>
 

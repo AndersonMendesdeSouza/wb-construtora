@@ -7,65 +7,38 @@ export function PropertyCard({ property }: { property: Property }) {
   const isHouse = property.category === 'house'
 
   return (
-    <article className="property-card">
-      <a
-        className="property-card-link"
-        href={`#/imovel/${property.id}`}
-        aria-label={`Ver detalhes de ${property.title}`}
-      >
-        <div className="property-cover">
-          <img
-            className={cover.collage ? 'collage-cover' : ''}
-            src={cover.src}
-            alt={cover.alt}
-            loading="lazy"
-          />
-          <span className="category-badge">{isHouse ? 'Casa' : 'Lote'}</span>
-          <span className="photo-count"><Icon name="photos" />{property.images.length}</span>
-          <span className="price-badge">
-            {formatPrice(property.price)}
-            {property.purpose === 'rent' && <small>/mês</small>}
-          </span>
+    <article className="wb-property-card">
+      <a href={`#/imovel/${property.id}`} aria-label={`Ver detalhes de ${property.title}`}>
+        <div className="wb-property-image">
+          <img className={cover.collage ? 'wb-collage-image' : ''} src={cover.src} alt={cover.alt} loading="lazy" />
+          <span className="wb-property-type">{isHouse ? 'Residencial' : 'Terreno'}</span>
+          <span className="wb-property-photos"><Icon name="photos" />{property.images.length}</span>
         </div>
-
-        <div className="property-card-body">
-          <span className={`purpose-badge ${property.purpose}`}>
-            {property.purpose === 'sale' ? 'À venda' : 'Para alugar'}
-          </span>
+        <div className="wb-property-info">
+          <div className="wb-property-labels">
+            <span>{property.purpose === 'sale' ? 'Disponível para venda' : 'Locação'}</span>
+            <span>{property.reference}</span>
+          </div>
           <h3>{property.title}</h3>
-          <p className="property-neighborhood">{property.neighborhood}</p>
-          <p className="property-location"><Icon name="pin" />{property.city}</p>
-
-          <div className="property-specs">
-            <div>
-              <span><Icon name="area" />{property.area.toLocaleString('pt-BR')} m²</span>
-              <small>{isHouse ? 'Área construída' : 'Área do terreno'}</small>
-            </div>
+          <p className="wb-property-address"><Icon name="pin" /><span>{property.neighborhood} · {property.city}</span></p>
+          <div className="wb-property-facts">
+            <span><Icon name="area" />{property.area.toLocaleString('pt-BR')} m²</span>
             {isHouse ? (
               <>
-                <div>
-                  <span><Icon name="bed" />{property.bedrooms}</span>
-                  <small>Quartos</small>
-                </div>
-                <div>
-                  <span><Icon name="bath" />{property.bathrooms}</span>
-                  <small>Banheiros</small>
-                </div>
+                <span><Icon name="bed" />{property.bedrooms} quartos</span>
+                <span><Icon name="car" />{property.parking} {property.parking === 1 ? 'vaga' : 'vagas'}</span>
               </>
             ) : (
-              <>
-                <div>
-                  <span><Icon name="area" />{property.frontage} m</span>
-                  <small>Frente</small>
-                </div>
-                <div>
-                  <span><Icon name="house" /></span>
-                  <small>Residencial</small>
-                </div>
-              </>
+              <span><Icon name="area" />{property.frontage} m de frente</span>
             )}
           </div>
-          <div className="card-action">Conhecer imóvel<Icon name="arrow" /></div>
+          <div className="wb-property-footer">
+            <div>
+              <span>{property.purpose === 'rent' ? 'Aluguel mensal' : 'Valor do imóvel'}</span>
+              <strong>{formatPrice(property.price)}{property.purpose === 'rent' && <small>/mês</small>}</strong>
+            </div>
+            <span className="wb-property-open"><Icon name="arrow" /><span className="wb-property-open-label">Ver detalhes</span></span>
+          </div>
         </div>
       </a>
     </article>
