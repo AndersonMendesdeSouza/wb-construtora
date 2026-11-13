@@ -1,17 +1,15 @@
 import type { PropertyImage } from './properties'
 import type { IconName } from '../components/Icon'
-import ideaPool from '../assets/ideias/image.png'
-import ideaPoolNight from '../assets/ideias/image copy.png'
 import ideaKitchen from '../assets/ideias/image copy 2.png'
 import ideaIntegration from '../assets/ideias/image copy 3.png'
 import ideaOutdoorNight from '../assets/ideias/image copy 4.png'
 import ideaFacadeNight from '../assets/ideias/ideia2/image.png'
 import ideaFacade from '../assets/ideias/ideia2/image copy.png'
 import ideaEntrance from '../assets/ideias/ideia2/image copy 2.png'
-import inspectionSite from '../assets/fiscalizacao/image.png'
-import inspectionVisit from '../assets/fiscalizacao/image copy.png'
-import inspectionFoundation from '../assets/fiscalizacao/image copy 2.png'
-import inspectionFollowUp from '../assets/fiscalizacao/image copy 3.png'
+import inspectionMasonry from '../assets/fiscalizacao/alvenaria-externa.jpg'
+import inspectionStructure from '../assets/fiscalizacao/estrutura-concreto.jpg'
+import inspectionInterior from '../assets/fiscalizacao/interior-em-construcao.jpg'
+import inspectionWalls from '../assets/fiscalizacao/paredes-alvenaria.jpg'
 
 export interface Work {
   id: string
@@ -31,22 +29,19 @@ export const works: Work[] = [
     id: 'ideia-residencia-com-piscina',
     title: 'Residência contemporânea com piscina',
     category: 'Projeto arquitetônico',
-    summary: 'Projeto autoral com piscina, cozinha integrada e fachada contemporânea. Explore os ambientes em 3D.',
-    description: 'Uma ideia para transformar o jeito de viver em casa. Este projeto autoral da Construtora reúne área externa com piscina, cozinha com bancada e integração por portas de vidro. Na fachada, volumes em tons neutros, revestimento texturizado e iluminação destacam a proposta contemporânea. A galeria apresenta as visualizações em 3D compartilhadas pela construtora.',
+    summary: 'Estudo ilustrativo com piscina, cozinha integrada e fachada contemporânea. Explore os ambientes em 3D.',
+    description: 'Uma ideia para transformar o jeito de viver em casa. Este estudo ilustrativo reúne área externa com piscina, cozinha com bancada e integração por portas de vidro. Na fachada, volumes em tons neutros, revestimento texturizado e iluminação destacam a proposta contemporânea. A galeria apresenta exemplos de visualizações em 3D, sem representar uma obra executada.',
     scope: ['Área externa com piscina', 'Cozinha com bancada', 'Integração entre os ambientes', 'Fachada com revestimento texturizado', 'Iluminação externa', 'Visualizações diurnas e noturnas'],
     images: [
-      { src: ideaPool, alt: 'Projeto 3D: residência com piscina e área externa durante o dia' },
-      { src: ideaPoolNight, alt: 'Projeto 3D: iluminação noturna da área da piscina' },
+      { src: ideaOutdoorNight, alt: 'Projeto 3D: vista noturna da casa e da área de lazer' },
       { src: ideaKitchen, alt: 'Projeto 3D: cozinha com bancada e mesa de jantar' },
       { src: ideaIntegration, alt: 'Projeto 3D: portas de vidro integrando a cozinha à área externa' },
-      { src: ideaOutdoorNight, alt: 'Projeto 3D: vista noturna da casa e da área de lazer' },
       { src: ideaFacade, alt: 'Projeto 3D: fachada com revestimento texturizado e jardim' },
       { src: ideaFacadeNight, alt: 'Projeto 3D: iluminação da fachada durante a noite' },
       { src: ideaEntrance, alt: 'Projeto 3D: vista frontal do portão de entrada' },
     ],
     kind: 'project',
     icon: 'house',
-    source: { label: 'Instagram', url: 'https://www.instagram.com/wbconstrutora/' },
   },
   {
     id: 'fiscalizacao-de-obras',
@@ -55,14 +50,15 @@ export const works: Work[] = [
     kind: 'service',
     icon: 'shield',
     summary: 'Presença técnica na obra para acompanhar os serviços e conferir as etapas da construção.',
-    description: 'A fiscalização acompanha o andamento da obra e verifica os serviços em execução. As imagens mostram visitas técnicas e diferentes etapas de construção, com acompanhamento no local.',
+    description: 'A fiscalização acompanha o andamento da obra e verifica os serviços em execução. As fotos de banco de imagens são exemplos ilustrativos de diferentes etapas da construção e não representam obras executadas pela construtora.',
     scope: ['Visitas técnicas à obra', 'Verificação dos serviços em execução', 'Acompanhamento das etapas construtivas', 'Registro do andamento da obra'],
     images: [
-      { src: inspectionVisit, alt: 'Registro de fiscalização durante visita a uma obra' },
-      { src: inspectionSite, alt: 'Obra em fase de alvenaria' },
-      { src: inspectionFoundation, alt: 'Acompanhamento de obra na fase de fundação e início da alvenaria' },
-      { src: inspectionFollowUp, alt: 'Visita de acompanhamento técnico durante a execução de uma obra' },
+      { src: inspectionMasonry, alt: 'Imagem ilustrativa de uma construção com paredes de alvenaria e pilares de concreto, sem pessoas' },
+      { src: inspectionStructure, alt: 'Imagem ilustrativa de uma estrutura de concreto em construção, sem pessoas' },
+      { src: inspectionInterior, alt: 'Imagem ilustrativa de um corredor em fase de acabamento, sem pessoas' },
+      { src: inspectionWalls, alt: 'Imagem ilustrativa de paredes de tijolos em construção, sem pessoas' },
     ],
+    source: { label: 'Pexels', url: 'https://www.pexels.com/' },
   },
   {
     id: 'projeto-estrutural',

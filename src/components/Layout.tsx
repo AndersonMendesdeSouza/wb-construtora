@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import { Brand } from './Brand'
 import { Icon } from './Icon'
-import { contact } from '../data/properties'
 
 export function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -11,12 +10,12 @@ export function Header() {
       <div className="wb-container wb-header-inner">
         <Brand />
         <nav id="wb-navigation" className={menuOpen ? 'wb-nav wb-nav-open' : 'wb-nav'} aria-label="Navegação principal">
-          <a href="#/wb/imoveis" onClick={() => setMenuOpen(false)}>Imóveis</a>
-          <a href="#/wb/trabalhos" onClick={() => setMenuOpen(false)}>Trabalhos</a>
-          <a href="#/wb/servicos" onClick={() => setMenuOpen(false)}>Serviços</a>
-          <a href="#/wb/empresa" onClick={() => setMenuOpen(false)}>A construtora</a>
-          <a className="wb-nav-contact" href="#/wb/contato" onClick={() => setMenuOpen(false)}>
-            Solicitar orçamento <Icon name="arrow" />
+          <a href="#imoveis" onClick={() => setMenuOpen(false)}>Imóveis</a>
+          <a href="#trabalhos" onClick={() => setMenuOpen(false)}>Trabalhos</a>
+          <a href="#servicos" onClick={() => setMenuOpen(false)}>Serviços</a>
+          <a href="#empresa" onClick={() => setMenuOpen(false)}>A construtora</a>
+          <a className="wb-nav-contact" href="#demonstracao" onClick={() => setMenuOpen(false)}>
+            Sobre o projeto <Icon name="arrow" />
           </a>
         </nav>
         <button
@@ -41,13 +40,13 @@ export function Footer() {
         <div className="wb-footer-top">
           <Brand />
           <p>Planejamento técnico.<br />Confiança em cada etapa.</p>
-          <a href={contact.instagram} target="_blank" rel="noreferrer">
-            <Icon name="instagram" />Instagram<Icon name="arrow" />
+          <a href="#servicos">
+            <Icon name="structure" />Conheça os serviços<Icon name="arrow" />
           </a>
         </div>
         <div className="wb-footer-bottom">
           <span>© {new Date().getFullYear()} Construtora.</span>
-          <span>Proposta demonstrativa · Imagens ilustrativas.</span>
+          <span>Projeto demonstrativo para portfólio · Imagens ilustrativas.</span>
         </div>
       </div>
     </footer>

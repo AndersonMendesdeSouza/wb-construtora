@@ -1,18 +1,16 @@
 import { PhotoGallery } from '../components/PhotoGallery'
 import { Icon } from '../components/Icon'
 import { Brand } from '../components/Brand'
-import { contact, formatPrice } from '../data/properties'
+import { formatPrice } from '../data/properties'
 import type { Property } from '../data/properties'
 
 export function PropertyDetails({ property }: { property: Property }) {
-  const message = `Olá! Tenho interesse no imóvel ${property.title}, referência ${property.reference}. Gostaria de mais informações.`
-  const whatsappUrl = `${contact.whatsapp}?text=${encodeURIComponent(message)}`
   const isHouse = property.category === 'house'
   const isRent = property.purpose === 'rent'
 
   return (
     <main id="conteudo" tabIndex={-1} className="details-page container">
-      <a className="text-link detail-back" href="#/wb/imoveis">
+      <a className="text-link detail-back" href="#imoveis">
         <Icon name="arrow" className="rotate" />
         Voltar
       </a>
@@ -109,12 +107,12 @@ export function PropertyDetails({ property }: { property: Property }) {
             <div>
               <h3>Uma boa história começa pelo lugar.</h3>
               <p>{property.neighborhood} · {property.city}</p>
-              <small>Localização de exemplo. Endereço completo sob consulta.</small>
+              <small>Localização fictícia para apresentação do catálogo.</small>
             </div>
           </section>
         </div>
 
-        <aside className="price-panel" aria-label="Preço e contato">
+        <aside className="price-panel" aria-label="Preço de exemplo e catálogo">
           <span className="eyebrow">Imagine as possibilidades</span>
           <span className="price-label">{isRent ? 'Aluguel mensal' : 'Valor do imóvel'}</span>
           <div className="detail-price">
@@ -123,19 +121,19 @@ export function PropertyDetails({ property }: { property: Property }) {
           </div>
           <div className="price-information">
             <Icon name="house" />
-            <span>{isRent ? 'Consulte as condições de locação' : 'Consulte as condições de compra'}</span>
+            <span>Valor ilustrativo para demonstração</span>
           </div>
-          <a className="button button-navy" href={whatsappUrl} target="_blank" rel="noreferrer">
-            <Icon name="whatsapp" />
-            Tenho interesse
+          <a className="button button-navy" href="#imoveis">
+            <Icon name="house" />
+            Explorar outros imóveis
             <Icon name="arrow" />
           </a>
           <p className="contact-hint">
-            A mensagem já vai com o nome do imóvel e a referência <strong>{property.reference}</strong>.
+            Catálogo demonstrativo. Preços, localizações e características são exemplos.
           </p>
           <div className="advisor">
             <Brand />
-            <span>Fale com a equipe da Construtora</span>
+            <span>Projeto demonstrativo para portfólio</span>
           </div>
           <p className="demo-disclaimer">
             Anúncio demonstrativo com imagem gerada por IA. Preço, localização e características são fictícios.

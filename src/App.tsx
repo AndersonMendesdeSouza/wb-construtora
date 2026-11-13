@@ -55,7 +55,7 @@ function App() {
         <span className="eyebrow">Conteúdo não encontrado</span>
         <h1>Vamos conhecer outras possibilidades?</h1>
         <p>Este conteúdo não está disponível. Explore os imóveis e trabalhos da construtora.</p>
-        <a className="button button-navy" href={isPropertyDetails ? '#/wb/imoveis' : '#/wb/trabalhos'}>
+        <a className="button button-navy" href={isPropertyDetails ? '#imoveis' : '#trabalhos'}>
           {isPropertyDetails ? 'Explorar imóveis' : 'Explorar trabalhos'}
         </a>
       </main>

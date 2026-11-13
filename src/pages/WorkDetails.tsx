@@ -1,16 +1,13 @@
 import { Icon } from '../components/Icon'
 import { PhotoGallery } from '../components/PhotoGallery'
-import { contact } from '../data/properties'
 import type { Work } from '../data/works'
 
 export function WorkDetails({ work }: { work: Work }) {
-  const message = `Olá! Gostaria de conversar com a construtora sobre ${work.title.toLowerCase()}.`
-  const whatsappUrl = `${contact.whatsapp}?text=${encodeURIComponent(message)}`
   const isProject = work.kind === 'project'
 
   return (
     <main id="conteudo" tabIndex={-1} className="details-page container wb-work-details">
-      <a className="text-link detail-back" href="#/wb/trabalhos">
+      <a className="text-link detail-back" href="#trabalhos">
         <Icon name="arrow" className="rotate" />Voltar aos serviços
       </a>
       <div className="detail-heading">
@@ -19,14 +16,14 @@ export function WorkDetails({ work }: { work: Work }) {
           <h1>{work.title}</h1>
           <p className="detail-location">Projetos e serviços · Construtora</p>
         </div>
-        <span className="wb-demo-badge">{isProject ? 'Projeto autoral · Visualizações 3D' : 'Serviço da Construtora'}</span>
+        <span className="wb-demo-badge">{isProject ? 'Projeto ilustrativo · Visualizações 3D' : 'Serviço demonstrativo'}</span>
       </div>
       <div className="wb-work-detail-layout">
         <div className="detail-main">
           {work.images.length > 0 && <PhotoGallery images={work.images} title={work.title} />}
           {work.source && (
             <p className="image-credit">
-              Projeto autoral da Construtora · Publicado no{' '}
+              Imagens ilustrativas · Fonte:{' '}
               <a href={work.source.url} target="_blank" rel="noreferrer">{work.source.label}</a>
             </p>
           )}
@@ -42,15 +39,15 @@ export function WorkDetails({ work }: { work: Work }) {
             </ul>
           </section>
         </div>
-        <aside className="price-panel" aria-label="Orçamento do serviço">
-          <span className="eyebrow">Tem um projeto em mente?</span>
-          <h2 className="wb-budget-title">Vamos construir<br />o próximo passo.</h2>
-          <p className="wb-budget-copy">Converse com a equipe sobre seu projeto e solicite um orçamento.</p>
-          <a className="button button-navy" href={whatsappUrl} target="_blank" rel="noreferrer">
-            <Icon name="whatsapp" />Solicitar orçamento<Icon name="arrow" />
+        <aside className="price-panel" aria-label="Explorar serviços">
+          <span className="eyebrow">Serviços de exemplo</span>
+          <h2 className="wb-budget-title">Conheça as soluções<br />para cada etapa.</h2>
+          <p className="wb-budget-copy">Explore uma apresentação ilustrativa de serviços de engenharia e construção.</p>
+          <a className="button button-navy" href="#servicos">
+            <Icon name="structure" />Ver todos os serviços<Icon name="arrow" />
           </a>
-          <p className="contact-hint">Construtora · +55 (62) 98582-4049</p>
-          {isProject && <p className="demo-disclaimer">Projeto arquitetônico apresentado em 3D. Converse com a construtora sobre as possibilidades para a sua construção.</p>}
+          <p className="contact-hint">Projeto demonstrativo para portfólio.</p>
+          {isProject && <p className="demo-disclaimer">Visualização arquitetônica ilustrativa em 3D.</p>}
         </aside>
       </div>
     </main>

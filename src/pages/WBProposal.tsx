@@ -3,14 +3,11 @@ import { Icon } from '../components/Icon'
 import type { IconName } from '../components/Icon'
 import { PropertyCard } from '../components/PropertyCard'
 import { WorkCard } from '../components/WorkCard'
-import { contact, properties } from '../data/properties'
+import { properties } from '../data/properties'
 import { works } from '../data/works'
 import type { PropertyCategory } from '../data/properties'
 import residenceImage from '../assets/wb-banner.png'
 import facadeImage from '../assets/ideias/ideia2/image.png'
-
-const instagram = contact.instagram
-const whatsapp = `${contact.whatsapp}?text=${encodeURIComponent('Olá! Gostaria de conversar sobre um projeto.')}`
 
 const worksWithPhotos = works.filter((work) => work.images.length > 0)
 const fixedServices: { id: string; title: string; icon: IconName; summary: string }[] = [
@@ -38,14 +35,14 @@ export function WBProposal() {
               <h1 id="wb-hero-title">Projetamos espaços.<br /><span>Construímos histórias.</span></h1>
               <p>Planejamento técnico, atenção aos detalhes e confiança em cada etapa. Do primeiro traço à execução da sua obra.</p>
               <div className="wb-hero-actions">
-                <a className="wb-button wb-button-light" href={whatsapp} target="_blank" rel="noreferrer">
-                  Converse sobre seu projeto <Icon name="arrow" />
+                <a className="wb-button wb-button-light" href="#servicos">
+                  Conheça nossos serviços <Icon name="arrow" />
                 </a>
-                <a className="wb-hero-projects" href="#/wb/trabalhos">Conheça nossos trabalhos <Icon name="arrow" /></a>
+                <a className="wb-hero-projects" href="#trabalhos">Conheça nossos trabalhos <Icon name="arrow" /></a>
               </div>
             </div>
             <div className="wb-hero-bottom">
-              <a href="#/wb/imoveis"><span className="wb-scroll-mark" />Explore as possibilidades</a>
+              <a href="#imoveis"><span className="wb-scroll-mark" />Explore as possibilidades</a>
               <span>PROJETOS · OBRAS · IMÓVEIS</span>
             </div>
           </div>
@@ -55,7 +52,7 @@ export function WBProposal() {
         <div className="wb-expertise" aria-label="Áreas de atuação">
           <div className="wb-container">
             <span>PROJETAR.</span><span>PLANEJAR.</span><span>CONSTRUIR.</span>
-            <a href="#/wb/servicos">Conheça nossas soluções <Icon name="arrow" /></a>
+            <a href="#servicos">Conheça nossas soluções <Icon name="arrow" /></a>
           </div>
         </div>
 
@@ -104,9 +101,9 @@ export function WBProposal() {
                 <span className="wb-kicker">02 / SOLUÇÕES PARA SUA OBRA</span>
                 <h2 id="wb-portfolio-title">Serviços da Construtora.<br /><span>Do projeto ao acompanhamento.</span></h2>
               </div>
-              <a className="wb-inline-link" href={instagram} target="_blank" rel="noreferrer">Acompanhe no Instagram <Icon name="arrow" /></a>
+              <a className="wb-inline-link" href="#servicos">Conheça todos os serviços <Icon name="arrow" /></a>
             </div>
-            <p className="wb-catalog-note">Conheça cada serviço, explore o projeto autoral e veja os registros de fiscalização de obras.</p>
+            <p className="wb-catalog-note">Conheça cada serviço, explore o projeto ilustrativo e veja imagens de exemplo de obras.</p>
             <div className="wb-portfolio-grid">
               {worksWithPhotos.map((work) => <WorkCard key={work.id} work={work} />)}
             </div>
@@ -123,8 +120,8 @@ export function WBProposal() {
                       <h4>{service.title}</h4>
                       <p>{service.summary}</p>
                       {service.id === 'regularizacao-de-imoveis' && (
-                        <a className="wb-inline-link" href={whatsapp} target="_blank" rel="noreferrer">
-                          Fale sobre regularização <Icon name="arrow" />
+                        <a className="wb-inline-link" href="#/trabalho/regularizacao-de-imoveis">
+                          Conheça o serviço <Icon name="arrow" />
                         </a>
                       )}
                     </div>
@@ -138,8 +135,8 @@ export function WBProposal() {
         <section id="wb-atuacao" className="wb-section wb-work" aria-labelledby="wb-work-title">
           <div className="wb-container wb-work-grid">
             <div className="wb-work-visual">
-              <img src={facadeImage} alt="Projeto autoral: fachada residencial com revestimento texturizado e iluminação noturna" loading="lazy" />
-              <span>PROJETO AUTORAL · VISUALIZAÇÃO 3D</span>
+              <img src={facadeImage} alt="Projeto ilustrativo: fachada residencial com revestimento texturizado e iluminação noturna" loading="lazy" />
+              <span>PROJETO ILUSTRATIVO · VISUALIZAÇÃO 3D</span>
             </div>
             <div className="wb-work-copy">
               <span className="wb-kicker">03 / PROJETOS E EXECUÇÃO</span>
@@ -162,8 +159,8 @@ export function WBProposal() {
                   <p>Planejamento e execução de obras.</p>
                 </div>
               </div>
-              <a className="wb-inline-link" href={instagram} target="_blank" rel="noreferrer">
-                Veja os trabalhos no Instagram <Icon name="arrow" />
+              <a className="wb-inline-link" href="#/trabalho/ideia-residencia-com-piscina">
+                Explore o projeto ilustrativo <Icon name="arrow" />
               </a>
             </div>
           </div>
@@ -177,7 +174,7 @@ export function WBProposal() {
               <p>Projetar e construir exige olhar para o todo, sem perder de vista os detalhes. É com essa atenção que apresentamos as soluções da Construtora.</p>
               <div className="wb-engineer">
                 <span className="wb-engineer-mark"><Icon name="structure" /></span>
-                <div><strong>Wilson Bernardo Neto</strong><span>Engenheiro civil</span></div>
+                <div><strong>Equipe de engenharia</strong><span>Apresentação ilustrativa</span></div>
               </div>
             </div>
             <div className="wb-principles">
@@ -200,19 +197,18 @@ export function WBProposal() {
           </div>
         </section>
 
-        <section id="wb-contato" className="wb-contact" aria-labelledby="wb-contact-title">
+        <section id="wb-demonstracao" className="wb-contact" aria-labelledby="wb-demonstracao-title">
           <div className="wb-container wb-contact-grid">
             <div>
-              <span className="wb-kicker">SEU PROJETO COMEÇA COM UMA CONVERSA</span>
-              <h2 id="wb-contact-title">Vamos tirar sua ideia<br /><span>do papel?</span></h2>
-              <p>Conte o que você está planejando e converse com a construtora sobre os próximos passos.</p>
+              <span className="wb-kicker">PROJETO DEMONSTRATIVO PARA PORTFÓLIO</span>
+              <h2 id="wb-demonstracao-title">Uma ideia de site.<br /><span>Muitas possibilidades.</span></h2>
+              <p>Explore uma apresentação de construtora fictícia, com catálogo de imóveis e serviços de exemplo.</p>
             </div>
             <div className="wb-contact-actions">
-              <a className="wb-button wb-button-light" href={whatsapp} target="_blank" rel="noreferrer">
-                <Icon name="whatsapp" />Solicitar orçamento<Icon name="arrow" />
+              <a className="wb-button wb-button-light" href="#imoveis">
+                <Icon name="house" />Explorar o catálogo<Icon name="arrow" />
               </a>
-              <a className="wb-phone" href="tel:+5562985824049">+55 (62) 98582-4049</a>
-              <span>Atendimento pelo WhatsApp</span>
+              <span>Conteúdo e imagens ilustrativos</span>
             </div>
           </div>
         </section>
