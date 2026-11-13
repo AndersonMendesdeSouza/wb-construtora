@@ -24,8 +24,8 @@ function App() {
   useEffect(() => {
     const title = property?.title ?? work?.title
     document.title = title
-      ? `${title} | WB Construtora`
-      : 'WB Construtora | Projetos, obras e imóveis'
+      ? `${title} | Construtora`
+      : 'Construtora | Projetos, obras e imóveis'
 
     const frame = window.requestAnimationFrame(() => {
       let section = ''
@@ -54,7 +54,7 @@ function App() {
       <main id="conteudo" tabIndex={-1} className="container not-found">
         <span className="eyebrow">Conteúdo não encontrado</span>
         <h1>Vamos conhecer outras possibilidades?</h1>
-        <p>Este conteúdo não está disponível. Explore os imóveis e trabalhos da WB.</p>
+        <p>Este conteúdo não está disponível. Explore os imóveis e trabalhos da construtora.</p>
         <a className="button button-navy" href={isPropertyDetails ? '#/wb/imoveis' : '#/wb/trabalhos'}>
           {isPropertyDetails ? 'Explorar imóveis' : 'Explorar trabalhos'}
         </a>

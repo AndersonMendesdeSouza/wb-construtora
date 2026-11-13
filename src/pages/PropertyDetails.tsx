@@ -135,7 +135,7 @@ export function PropertyDetails({ property }: { property: Property }) {
           </p>
           <div className="advisor">
             <Brand />
-            <span>Fale com a equipe da WB Construtora</span>
+            <span>Fale com a equipe da Construtora</span>
           </div>
           <p className="demo-disclaimer">
             Anúncio demonstrativo com imagem gerada por IA. Preço, localização e características são fictícios.

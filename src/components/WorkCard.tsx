@@ -10,11 +10,11 @@ export function WorkCard({ work }: { work: Work }) {
         {cover ? (
           <div className="wb-work-cover">
             <img src={cover.src} alt={cover.alt} loading="lazy" />
-            <span>{work.kind === 'project' ? 'Projeto autoral WB' : 'Serviço WB'}</span>
+            <span>{work.kind === 'project' ? 'Projeto autoral' : 'Serviço da construtora'}</span>
             <span className="wb-work-photo-count"><Icon name="photos" />{work.images.length} imagens</span>
           </div>
         ) : (
-          <div className="wb-service-cover"><Icon name={work.icon} /><span>WB CONSTRUTORA</span></div>
+          <div className="wb-service-cover"><Icon name={work.icon} /><span>CONSTRUTORA</span></div>
         )}
         <div className="wb-work-card-body">
           <span className="wb-kicker">{work.category}</span>

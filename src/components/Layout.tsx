@@ -42,11 +42,11 @@ export function Footer() {
           <Brand />
           <p>Planejamento técnico.<br />Confiança em cada etapa.</p>
           <a href={contact.instagram} target="_blank" rel="noreferrer">
-            <Icon name="instagram" />@wbconstrutora<Icon name="arrow" />
+            <Icon name="instagram" />Instagram<Icon name="arrow" />
           </a>
         </div>
         <div className="wb-footer-bottom">
-          <span>© {new Date().getFullYear()} WB Construtora.</span>
+          <span>© {new Date().getFullYear()} Construtora.</span>
           <span>Proposta demonstrativa · Imagens ilustrativas.</span>
         </div>
       </div>

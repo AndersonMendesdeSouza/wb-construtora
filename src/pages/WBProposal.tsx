@@ -34,7 +34,7 @@ export function WBProposal() {
           <div className="wb-hero-overlay" />
           <div className="wb-container wb-hero-content">
             <div className="wb-hero-copy">
-              <span className="wb-kicker"><span />WB CONSTRUTORA · ENGENHARIA E CONSTRUÇÃO</span>
+              <span className="wb-kicker"><span />CONSTRUTORA · ENGENHARIA E CONSTRUÇÃO</span>
               <h1 id="wb-hero-title">Projetamos espaços.<br /><span>Construímos histórias.</span></h1>
               <p>Planejamento técnico, atenção aos detalhes e confiança em cada etapa. Do primeiro traço à execução da sua obra.</p>
               <div className="wb-hero-actions">
@@ -93,7 +93,7 @@ export function WBProposal() {
             <div className="wb-property-grid">
               {filteredProperties.map((property) => <PropertyCard key={property.id} property={property} />)}
             </div>
-            <p className="wb-catalog-note">Catálogo demonstrativo com imagens geradas por IA. Valores, endereços e características são fictícios e não representam ofertas confirmadas da WB.</p>
+            <p className="wb-catalog-note">Catálogo demonstrativo com imagens geradas por IA. Valores, endereços e características são fictícios e não representam ofertas confirmadas da construtora.</p>
           </div>
         </section>
 
@@ -102,9 +102,9 @@ export function WBProposal() {
             <div className="wb-section-heading">
               <div>
                 <span className="wb-kicker">02 / SOLUÇÕES PARA SUA OBRA</span>
-                <h2 id="wb-portfolio-title">Serviços da WB Construtora.<br /><span>Do projeto ao acompanhamento.</span></h2>
+                <h2 id="wb-portfolio-title">Serviços da Construtora.<br /><span>Do projeto ao acompanhamento.</span></h2>
               </div>
-              <a className="wb-inline-link" href={instagram} target="_blank" rel="noreferrer">Acompanhe a WB no Instagram <Icon name="arrow" /></a>
+              <a className="wb-inline-link" href={instagram} target="_blank" rel="noreferrer">Acompanhe no Instagram <Icon name="arrow" /></a>
             </div>
             <p className="wb-catalog-note">Conheça cada serviço, explore o projeto autoral e veja os registros de fiscalização de obras.</p>
             <div className="wb-portfolio-grid">
@@ -138,13 +138,13 @@ export function WBProposal() {
         <section id="wb-atuacao" className="wb-section wb-work" aria-labelledby="wb-work-title">
           <div className="wb-container wb-work-grid">
             <div className="wb-work-visual">
-              <img src={facadeImage} alt="Projeto autoral da WB: fachada residencial com revestimento texturizado e iluminação noturna" loading="lazy" />
-              <span>PROJETO AUTORAL WB · VISUALIZAÇÃO 3D</span>
+              <img src={facadeImage} alt="Projeto autoral: fachada residencial com revestimento texturizado e iluminação noturna" loading="lazy" />
+              <span>PROJETO AUTORAL · VISUALIZAÇÃO 3D</span>
             </div>
             <div className="wb-work-copy">
               <span className="wb-kicker">03 / PROJETOS E EXECUÇÃO</span>
               <h2 id="wb-work-title">O próximo espaço<br />pode começar<br /><span>com a sua ideia.</span></h2>
-              <p>A WB Construtora atua com projetos e execução de obras residenciais e comerciais, públicas e privadas.</p>
+              <p>A Construtora atua com projetos e execução de obras residenciais e comerciais, públicas e privadas.</p>
               <div className="wb-work-types">
                 <div>
                   <span>01</span>
@@ -174,9 +174,9 @@ export function WBProposal() {
             <div>
               <span className="wb-kicker">04 / A CONSTRUTORA</span>
               <h2 id="wb-company-title">Engenharia presente.<br /><span>Do projeto à obra.</span></h2>
-              <p>Projetar e construir exige olhar para o todo, sem perder de vista os detalhes. É com essa atenção que apresentamos as soluções da WB Construtora.</p>
+              <p>Projetar e construir exige olhar para o todo, sem perder de vista os detalhes. É com essa atenção que apresentamos as soluções da Construtora.</p>
               <div className="wb-engineer">
-                <span className="wb-engineer-mark">WB</span>
+                <span className="wb-engineer-mark"><Icon name="structure" /></span>
                 <div><strong>Wilson Bernardo Neto</strong><span>Engenheiro civil</span></div>
               </div>
             </div>
@@ -205,7 +205,7 @@ export function WBProposal() {
             <div>
               <span className="wb-kicker">SEU PROJETO COMEÇA COM UMA CONVERSA</span>
               <h2 id="wb-contact-title">Vamos tirar sua ideia<br /><span>do papel?</span></h2>
-              <p>Conte o que você está planejando e converse com a WB sobre os próximos passos.</p>
+              <p>Conte o que você está planejando e converse com a construtora sobre os próximos passos.</p>
             </div>
             <div className="wb-contact-actions">
               <a className="wb-button wb-button-light" href={whatsapp} target="_blank" rel="noreferrer">

@@ -4,7 +4,7 @@ import { contact } from '../data/properties'
 import type { Work } from '../data/works'
 
 export function WorkDetails({ work }: { work: Work }) {
-  const message = `Olá! Gostaria de conversar com a WB sobre ${work.title.toLowerCase()}.`
+  const message = `Olá! Gostaria de conversar com a construtora sobre ${work.title.toLowerCase()}.`
   const whatsappUrl = `${contact.whatsapp}?text=${encodeURIComponent(message)}`
   const isProject = work.kind === 'project'
 
@@ -17,16 +17,16 @@ export function WorkDetails({ work }: { work: Work }) {
         <div>
           <span className="wb-kicker">{work.category}</span>
           <h1>{work.title}</h1>
-          <p className="detail-location">Projetos e serviços · WB Construtora</p>
+          <p className="detail-location">Projetos e serviços · Construtora</p>
         </div>
-        <span className="wb-demo-badge">{isProject ? 'Projeto autoral · Visualizações 3D' : 'Serviço WB Construtora'}</span>
+        <span className="wb-demo-badge">{isProject ? 'Projeto autoral · Visualizações 3D' : 'Serviço da Construtora'}</span>
       </div>
       <div className="wb-work-detail-layout">
         <div className="detail-main">
           {work.images.length > 0 && <PhotoGallery images={work.images} title={work.title} />}
           {work.source && (
             <p className="image-credit">
-              Projeto autoral da WB Construtora · Publicado por{' '}
+              Projeto autoral da Construtora · Publicado no{' '}
               <a href={work.source.url} target="_blank" rel="noreferrer">{work.source.label}</a>
             </p>
           )}
@@ -49,8 +49,8 @@ export function WorkDetails({ work }: { work: Work }) {
           <a className="button button-navy" href={whatsappUrl} target="_blank" rel="noreferrer">
             <Icon name="whatsapp" />Solicitar orçamento<Icon name="arrow" />
           </a>
-          <p className="contact-hint">WB Construtora · +55 (62) 98582-4049</p>
-          {isProject && <p className="demo-disclaimer">Projeto arquitetônico apresentado em 3D. Converse com a WB sobre as possibilidades para a sua construção.</p>}
+          <p className="contact-hint">Construtora · +55 (62) 98582-4049</p>
+          {isProject && <p className="demo-disclaimer">Projeto arquitetônico apresentado em 3D. Converse com a construtora sobre as possibilidades para a sua construção.</p>}
         </aside>
       </div>
     </main>
